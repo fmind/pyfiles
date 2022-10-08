@@ -1,0 +1,73 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+
+  tasks:
+  - name: Install CLI applications
+    community.general.pipx:
+      name: "{{ item }} "
+      state: install
+      executable: pipx
+    with_items:
+      - ansible
+      - asciinema
+      - aws-shell
+      - black
+      - chardet
+      - cookiecutter
+      - docker-compose
+      # - gitsome
+      - glances
+      - glom
+      - gpustat
+      - howdoi
+      - http-prompt
+      - httpie
+      - httpstat
+      - invoke
+      - ipython
+      - iredis
+      - isort
+      - jello
+      - jc
+      - jupyterlab
+      - kaggle
+      - kube-shell
+      - litecli
+      - mycli
+      - mypy
+      - percol
+      - pgcli
+      - pipx
+      - poetry
+      - pylint
+      - pytest
+      - ranger-fm
+      - rich-cli
+      - saws
+      - scapy
+      - scrapy
+      - shell-functools
+      - supervisor
+      - termtosvg
+      - thefuck
+      - tqdm
+      - visidata
+      - watchdog
+      - wharfee
+      - xonsh
+      - you-get
+
+# aliases: https://github.com/fmind/dotfiles/blob/master/roles/aliases/files/aliases
+# cookiecutter
+# starship:
+  # unarchive:
+  #   src: https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
+  #   dest: ~/.local/bin
+  #   remote_src: yes
+  # tags: user
+# xonsh: https://github.com/fmind/dotfiles/blob/master/roles/xonsh/files/xonshrc
+# jupyter: https://github.com/fmind/jupyter.d
+# ipython: https://github.com/fmind/ipython.d
+# thefuck: https://github.com/nvbn/thefuck/wiki/Shell-aliases
+# richcli: https://github.com/Textualize/rich-cli
