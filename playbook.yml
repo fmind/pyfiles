@@ -14,6 +14,7 @@
       - black
       - chardet
       - cookiecutter
+      - cruft
       - docker-compose
       # - gitsome
       - glances
